@@ -6,3 +6,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.machine{opacity:1;transform:scale(var(--s))}.print-paper{transform:translateY(311px)}.printed-content{opacity:1;clip-path:none}.replay{display:none}}
 
 .print-scene{height:calc(630px * var(--s))}
+@media(max-width:355px){.header-call span{display:none}.brand-name small{font-size:5.5px;letter-spacing:.02em;max-width:130px}}
