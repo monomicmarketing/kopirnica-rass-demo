@@ -10,20 +10,11 @@ export default function Printer() {
     update(); query.addEventListener('change', update);
     return () => query.removeEventListener('change', update);
   }, []);
-  return <div className="print-wrap">
-    <div className="print-scene" key={`${run}-${reduced}`} role="img" aria-label="Printer štampa papir s nazivom RASS i tri djelatnosti">
+  return <div className={`print-wrap ${reduced ? 'is-reduced' : ''}`}>
+    <div className="print-scene" key={`${run}-${reduced}`} role="img" aria-label="Printer štampa papir s nazivom RASS i uslugama kopirnice, ključeva i pečata">
       <div className="scene-grid"/><div className="ground-shadow"/>
-      <div className="machine">
-        <div className="machine-back"/><div className="machine-top"><div className="top-inset"/></div>
-        <div className="machine-front">
-          <div className="control"><i/><span>R / 01</span><b>PRINT</b></div>
-          <div className="feed-slot"/>
-          <div className="feed-window"><div className="print-paper"><div className="paper-grain"/><div className="printed-content"><span className="paper-overline">SARAJEVO / TRG ZAVNOBIH-A 26</span><strong>RASS<span>.</span></strong><span className="paper-divider"/><span className="paper-subline">KOPIRNICA<br/>KLJUČEVI · PEČATI</span><span className="paper-code">01 — 03 / SVAKI DAN PRI RUCI</span></div></div></div>
-          <div className="slot-lip"/><div className="front-label">PRECIZNO. PRAKTIČNO. BLIZU.</div>
-        </div><div className="machine-base"/>
-      </div>
-      <div className="scene-index">01 / 03 <span>RASS · SARAJEVO</span></div>
+      <div className="machine"><div className="machine-back"/><div className="machine-top"><div className="top-inset"/></div><div className="machine-front"><div className="control"><i/><span>R / 01</span><b>PRINT</b></div><div className="feed-slot"/><div className="feed-window"><div className="print-paper"><div className="paper-grain"/><div className="printed-content"><span className="paper-overline">RASS / SARAJEVO</span><strong>RASS<span>.</span></strong><span className="paper-divider"/><span className="paper-subline">KOPIRNICA / KLJUČEVI / PEČATI</span><span className="paper-code">TRG ZAVNOBIH-A 26 · 71000</span></div></div></div><div className="slot-lip"/><div className="front-label">PRINT / KEY / STAMP</div></div><div className="machine-base"/></div>
     </div>
-    {!reduced && <button className="replay" type="button" onClick={() => setRun(v => v + 1)} aria-label="Ponovi animaciju štampanja"><span aria-hidden="true">↺</span> Ponovi ispis</button>}
+    <button className="replay" type="button" onClick={() => setRun(v => v + 1)} aria-label="Ponovi animaciju štampanja"><span aria-hidden="true">↻</span> Ponovi ispis</button>
   </div>;
 }
