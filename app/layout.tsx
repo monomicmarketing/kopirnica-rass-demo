@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/ibm-plex-sans';
 import './globals.css';
 
 export const metadata: Metadata = {

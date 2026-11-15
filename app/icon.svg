@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="RASS demo monogram">
+  <rect width="64" height="64" fill="#2563eb"/>
+  <path d="M16 12h23c11 0 16 6 16 15 0 7-3 11-9 14l9 11H42L34 42h-6v10H16V12zm12 10v10h10c4 0 6-2 6-5s-2-5-6-5H28z" fill="#f5f5f0"/>
+  <circle cx="10" cy="55" r="3" fill="#a9c5ff"/>
+</svg>
